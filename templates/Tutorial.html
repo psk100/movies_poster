@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Upd & downloader</title>
+    <link href="./static/tutorial_css.css" rel="stylesheet"><meta charset="utf-8" name="viewport" 
+    content= "width=device-width, initial-scale=1.0">
+    </head>
+</head>
+<div>
+<h1 class="tl_cmd">Linux Commands</h1>
+<div>
+<div>
+<h1 class="tl_cmd">Calender Commands(In shorts cal )</h1>
+<div>
+
+<div class='container'>
+
+<script>
+/*
+h1{
+position:relative
+display:block;
+}
+<img src='./static/img/rhel8.png'>*/
+			function check_ext(a){
+			var va=a.slice[0,-4];
+			//ar textx =va.toString();
+			var text = a;
+			if (text.includes("_opt")){
+			//document.getElementById(a).innerHTML='hello this new mp4';
+			document.getElementById(text.slice(0,-4)).src='./static/uploads/20_08_2022/date commands/'+a;
+			}
+			if (text.includes("opt")){
+			//document.getElementById(a).innerHTML='hello this new mp4';
+			document.getElementById(text).style.display='none';
+			document.getElementById(text+'1').style.display='none';
+			}
+			
+			
+			}
+			
+</script>
+    {% set another = 4 %}
+    {% set crrt_ind = 0 %}
+    {# set vars={{column}} #}
+    {% set jfile = files|length %}
+    
+        {%- for row in files %}
+		<div class="row_1">
+		<h1>{{row[:-4]}}</h1>
+		<div class="row_2">
+          
+            
+            <div class='file_col' id="{{row}}" > 
+              <a  href='/static/uploads/{{column}}'  class="item_s">
+                <img id="{{row[:-3]}}" src='./static/uploads/20_08_2022/date commands/{{row}}' >
+                <label id='{{row[:-2]}}'></label>
+              </a>
+			  
+            </div>
+			     
+              
+            <div class='file_col_opt' id="{{row}}1"> 
+              <a  href='/static/uploads/{{row}}'  class="item_s">
+                <img id="{{row[:-3]}}" src='./static/uploads/20_08_2022/date commands/opt/{{row[:-4]}}_opt.png' >
+                <label id='{{row[:-2]}}'></label>
+              </a>
+			  
+            </div>
+			<script>
+			check_ext('{{row}}')
+			</script>
+			
+            
+            
+             
+            
+          </div>
+		  </div>
+        {%- endfor %}
+        
+        
+        
+ </div>   
+<div>
+
+</div>
+<!--
+
+ {% set another = 4 %}
+    {% set crrt_ind = 0 %}
+    {# set vars={{column}} #}
+    {% set jfile = files|length %}
+    
+        {%- for row in files|batch(2, '') %}
+          <div class="row">
+          {%- for column in row %}
+            
+            <div class='file_col'> 
+              <a  href='/static/uploads/{{column}}'  class="item_s">
+                <img id="{{column[:-4]}}" src='./static/uploads/20_08_2022/cal commands/{{column}}' >
+                <label id='{{column}}'></label>
+              </a>
+			  
+            </div>
+			<script>
+			check_ext('{{column}}')
+			</script>
+			
+            
+            
+             
+            {%- endfor %}
+          </div>
+        {%- endfor %}
+
+-->
+</html>

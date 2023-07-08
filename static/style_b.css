@@ -1,0 +1,140 @@
+*{
+	margin:0;
+	padding:0;
+    /*background: white;*/
+	font-family: 'Poppins', sans-serif;	  
+}
+
+body {
+ /*background-image: url("/static/img/rhel8.png");
+ 
+  background-position: center;
+  background-repeat: no-repeat;*/
+ 
+ background-color: black;
+ 
+}
+
+.space{
+padding-top:100px;
+
+}
+.container
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+	
+    /*padding-top: 50px;*/
+}
+.container img{
+	width:100%;
+	display:block;
+	position:relative;
+	
+	
+}
+.row {
+	
+	margin-top:5%;
+	display:flex;
+	position:relative;
+	justify-content:space-between;
+}
+.mttl{
+color:black;
+}
+.file_col{
+	flex-basis:32%;
+	background:white;
+	border-radius:20px;
+	border: 2px dashed white;
+	margin-bottom:5%;
+	padding:16px -34px;
+	box-sizing:border-box ;
+	position:relative;
+	transition:0.5s;
+	overflow:hidden;
+	
+}
+.file_col img{
+width:100%;
+display:block;	
+	
+}
+
+h3{ 
+text-align:center;
+font-weight:600;
+margin: 10px 0;
+}
+/*a{
+    color: red;   
+    box-shadow: inset;
+    text-decoration:none;    
+    border-color: black;
+    display:inline-block;	
+	border:1px solid rgb(167, 228, 99);
+	padding:12px 34px;
+	font-size:15px;
+	background:transparent;
+	position:relative;
+    box-sizing: 4px;
+	cursor:pointer;
+}
+.action_btn{
+    color: red;   
+  
+}
+.item_s{
+    width: 50%;
+    height: 200px;
+    color: green;
+    border-radius: 10px  ;
+    margin-bottom:20px;
+}
+*/
+.heads{
+	display:flex;
+}
+.redhat{
+	
+	margin-left:20px;
+	margin-top:20px;
+	position:absolute;	
+	
+	
+}
+input{
+	border-radius:25px;
+	width:325px;
+	height:66px;
+	border-block-color:red
+
+}
+h1{
+	
+    color:red;
+
+}
+h2{
+	
+	color:white;
+	
+}
+label{
+color:white;}
+
+.tutorial_img{
+	width:100%;
+	height:3%;
+	
+}
+.tutorial_img img{
+	width:10%;
+	height:3%;
+	margin-left: auto;
+	display: block;
+
+}
+

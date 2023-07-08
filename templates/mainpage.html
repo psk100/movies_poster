@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 class='d' algin="center">----- Recommneded</h1>
+<div class="container">
+    
+    {% set another = 4 %}
+    {% set crrt_ind = 0 %}
+    {# set vars={{column}} #}
+    {% set jfile = files|length %}
+    
+        {%- for row in files|batch(2, '') %}
+          <div class="row">
+          {%- for column in row %}
+            
+            <div class='file_col'> 
+              <a  href='/static/upload/Posters/{{column}}'  class="item_s">
+                <img id="{{column}}" src='./static/upload/Posters/{{column}}' >
+                <label id='{{column[:-4]}}'></label>
+              </a>
+	      <h1 class='mttl'>{{column[:-4]}}</h1>
+			  
+            </div>
+			<!--script>
+			check_ext('{{column[:-4]}}')
+			</script-->
+			
+            
+            
+             
+            {%- endfor %}
+          </div>
+        {%- endfor %}
+</div>
+{% endblock %}

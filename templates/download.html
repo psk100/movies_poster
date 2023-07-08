@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{%block body %}
+<div class='heads' >
+
+<div class='redhat'>
+<h1>Red Hat</h1> 
+<h2>{{uname}}</h2>
+</div>
+<div class='tutorial_img'><a href="/tutorial"><img src='./static/img/dl2.png'></a></div>
+</div>
+
+
+
+<!--table class="table table-bordered" >
+    <thead>
+    <tr>
+        <!--th scope="col">Sno</th>
+        <th scope="col">Files</th>
+            </tr>
+    </thead>
+    
+    <tbody-->
+<div class='container'>
+ 
+<!--script> tyoe  wise image classification or icon setting
+
+			function check_ext(a){
+			var va=a.slice[0,-4];
+			//ar textx =va.toString();
+			var text = a;
+			if (text.includes(".exe")){
+			//document.getElementById(a).innerHTML='hello this new mp4';
+			document.getElementById(text.slice(0,-4)).src='./static/img/vmware.png';
+			}
+			if (text.includes(".iso")){
+			//document.getElementById(a).innerHTML='hello this new mp4';
+			document.getElementById(text.slice(0,-4)).src='./static/img/logo_redhat.png';
+			}
+			if (text.includes(".mp4")){
+			//document.getElementById(a).innerHTML='hello this new mp4';
+			document.getElementById(text.slice(0,-4)).src='./static/img/video.png';
+			}
+			if (text.includes(".zip") || text.includes(".rar")){
+			//document.getElementById(a).innerHTML='hello this zip';
+			document.getElementById(text.slice(0,-4)).src='./static/img/zip.png';
+			}
+			
+			if (text.includes(".jpg")|| text.includes(".jpge" )||text.includes(".png")){
+			//document.getElementById(a).innerHTML=text.slice(0,-4);
+			document.getElementById(text.slice(0,-4)).src='./static/upload/posters/'+a;
+			document.getElementById(text.slice(0,-4)).style.height='250px';
+			}
+			if (text.includes(".mp3")){
+			//document.getElementById(a).innerHTML='hello this mp3';
+			document.getElementById(text.slice(0,-4)).src='./static/img/mp3.png';
+			}
+			}
+			
+</script-->
+    {% set another = 4 %}
+    {% set crrt_ind = 0 %}
+    {# set vars={{column}} #}
+    {% set jfile = files|length %}
+    
+        {%- for row in files|batch(2, '') %}
+          <div class="row">
+          {%- for column in row %}
+            
+            <div class='file_col'> 
+              <a  href='/static/upload/Posters/{{column}}'  class="item_s">
+                <img id="{{column}}" src='./static/upload/Posters/{{column}}' >
+                <label id='{{column[:-4]}}'></label>
+              </a>
+	      <h1 class='mttl'>{{column[:-4]}}</h1>
+			  
+            </div>
+			<!--script>
+			check_ext('{{column[:-4]}}')
+			</script-->
+			
+            
+            
+             
+            {%- endfor %}
+          </div>
+        {%- endfor %}
+        
+        
+       
+ </div>   
+<div>
+
+</div>
+
+
+
+{% endblock body%}
+<!--tbody>
+    {% set another = 4 %}
+    {% set crrt_ind = 0 %}
+    {%set jfile = files|length %}
+    
+        {%- for row in files|batch(4, '') %}
+          <tr class="row1">
+          {%- for column in row %}
+          
+            <td><a id="{{column[:-4]}}" href='/static/upload/Posters/{{column}}' class="item_s">{{ column }}</a></td>
+	    <td><h1>{{column}}</h1></td>
+            {% if 'zip' in column %}
+              <script>
+                document.getElementById('{{column[:-4]}}').style.backgroundImage='./static/img/dl2.png';
+              </script>
+            {% else %}
+            <script>
+              document.getElementById('{{column[:-4]}}').style.backgroundImage='./static/img/upd.png';
+            </script>
+            {% endif %}
+            {%- endfor %}
+          </tr>
+        {%- endfor %}
+        
+        
+    </tbody-->

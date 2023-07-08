@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <title>File Uploader</title>
+    <link href="./static/style.css" rel="stylesheet"><meta charset="utf-8" name="viewport" 
+    content= "width=device-width, initial-scale=1.0">
+    </head>	
+	<body>
+      <form action = "http://{{hip}}:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>   
+   </body>
+</html>

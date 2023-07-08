@@ -1,0 +1,28 @@
+*{
+	margin:0;
+	padding:0;
+    background: white;
+	font-family: 'Poppins', sans-serif;	  
+}
+body{
+	background:white;
+}
+
+
+form{
+	position:absolute;
+	display:flex;
+	border:20;
+	width:100%;
+	height:100%;
+	align-items:center;
+	
+	background:blue;
+	border:2;
+	
+}
+form input{
+		align-items:center;
+		right:20
+	
+}
